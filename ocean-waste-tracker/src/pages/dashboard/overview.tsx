@@ -1,18 +1,21 @@
-// src/pages/dashboard/overview.tsx
+// src/pages/dashboard/devices.tsx
 import Layout from '../../components/layout';
+import { Input } from '../../components/ui/input';
+import { Button } from '../../components/ui/button';
 
-const OverviewPage = () => {
+const DevicesPage = () => {
   return (
     <Layout>
       <div className="container">
-        <h2 className="text-2xl font-bold mb-4">Waste Detection Overview</h2>
-        <div className="h-96 bg-gray-200">
-          {/* Placeholder for map integration */}
-          <div id="map" className="w-full h-full"></div>
+        <h2 className="text-2xl font-bold mb-4">Devices</h2>
+        <div className="mb-4">
+          <Input placeholder="Device IP Address" className="mb-4" />
+          <Input placeholder="Device Name" className="mb-4" />
+          <Button>Connect</Button>
         </div>
       </div>
     </Layout>
   );
 };
 
-export default OverviewPage;
+export default DevicesPage;

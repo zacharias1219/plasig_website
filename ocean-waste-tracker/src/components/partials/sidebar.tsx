@@ -1,18 +1,15 @@
-// src/components/partials/sidebar.tsx
-const Sidebar = () => {
+// src/components/partials/header.tsx
+import { UserButton } from '@clerk/nextjs';
+
+const Header = () => {
   return (
-    <aside className="w-64 bg-gray-100 p-4">
-      <nav>
-        <ul>
-          <li className="mb-4"><a href="/dashboard">Dashboard</a></li>
-          <li className="mb-4"><a href="/dashboard/devices">Devices</a></li>
-          <li className="mb-4"><a href="/dashboard/sessions">Sessions</a></li>
-          <li className="mb-4"><a href="/dashboard/overview">Overview</a></li>
-          <li className="mb-4"><a href="/dashboard/monitoring">Monitoring</a></li>
-        </ul>
-      </nav>
-    </aside>
+    <header className="bg-white shadow-md p-4">
+      <div className="flex justify-between items-center">
+        <h1 className="text-xl font-bold">Dashboard</h1>
+        <UserButton />
+      </div>
+    </header>
   );
 };
 
-export default Sidebar;
+export default Header;

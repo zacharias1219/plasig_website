@@ -1,7 +1,7 @@
 // src/pages/dashboard/devices.tsx
 import Layout from '../../components/layout';
-import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
+import { Button } from '../../components/ui/button';
 
 const DevicesPage = () => {
   return (

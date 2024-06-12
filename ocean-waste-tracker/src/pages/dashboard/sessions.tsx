@@ -1,25 +1,21 @@
-// src/pages/dashboard/sessions.tsx
+// src/pages/dashboard/devices.tsx
 import Layout from '../../components/layout';
+import { Input } from '../../components/ui/input';
 import { Button } from '../../components/ui/button';
 
-const SessionsPage = () => {
+const DevicesPage = () => {
   return (
     <Layout>
       <div className="container">
-        <h2 className="text-2xl font-bold mb-4">Session Management</h2>
-        <Button className="mb-4">Start New Session</Button>
-        <div>
-          <h3 className="text-md font-semibold mb-2">Past Sessions</h3>
-          <ul>
-            {/* Placeholder for session list */}
-            <li className="mb-2">Session 1 - [Details]</li>
-            <li className="mb-2">Session 2 - [Details]</li>
-            <li className="mb-2">Session 3 - [Details]</li>
-          </ul>
+        <h2 className="text-2xl font-bold mb-4">Devices</h2>
+        <div className="mb-4">
+          <Input placeholder="Device IP Address" className="mb-4" />
+          <Input placeholder="Device Name" className="mb-4" />
+          <Button>Connect</Button>
         </div>
       </div>
     </Layout>
   );
 };
 
-export default SessionsPage;
+export default DevicesPage;

@@ -1,21 +1,21 @@
-// src/pages/dashboard/monitoring.tsx
+// src/pages/dashboard/devices.tsx
 import Layout from '../../components/layout';
+import { Input } from '../../components/ui/input';
 import { Button } from '../../components/ui/button';
 
-const MonitoringPage = () => {
+const DevicesPage = () => {
   return (
     <Layout>
       <div className="container">
-        <h2 className="text-2xl font-bold mb-4">Live Monitoring</h2>
+        <h2 className="text-2xl font-bold mb-4">Devices</h2>
         <div className="mb-4">
-          {/* Placeholder for video stream */}
-          <video className="w-full h-64 bg-gray-200"></video>
+          <Input placeholder="Device IP Address" className="mb-4" />
+          <Input placeholder="Device Name" className="mb-4" />
+          <Button>Connect</Button>
         </div>
-        <Button className="mr-2">Start Feed</Button>
-        <Button>Stop Feed</Button>
       </div>
     </Layout>
   );
 };
 
-export default MonitoringPage;
+export default DevicesPage;
