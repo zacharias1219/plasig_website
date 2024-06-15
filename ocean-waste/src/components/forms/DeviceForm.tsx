@@ -1,7 +1,6 @@
-// src/components/forms/DeviceForm.tsx
 import { useState } from 'react';
+import { Input } from '../ui/input';
 import { Button } from '../ui/button';
-import { Input } from '../ui/input'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 

@@ -1,6 +1,13 @@
 // src/components/WasteMap.tsx
 import { useEffect } from 'react';
 import L from 'leaflet';
+import axios from 'axios';
+
+interface Waste {
+  latitude: number;
+  longitude: number;
+  description: string;
+}
 
 const WasteMap = () => {
   useEffect(() => {
@@ -10,8 +17,18 @@ const WasteMap = () => {
       attribution: '&copy; OpenStreetMap contributors',
     }).addTo(map);
 
-    // Example marker
-    L.marker([51.5, -0.09]).addTo(map).bindPopup('A waste location').openPopup();
+    const fetchWasteData = async () => {
+      try {
+        const response = await axios.get<Waste[]>('/api/waste');
+        response.data.forEach((waste: Waste) => {
+          L.marker([waste.latitude, waste.longitude]).addTo(map).bindPopup(waste.description).openPopup();
+        });
+      } catch (error) {
+        console.error('Error fetching waste data', error);
+      }
+    };
+
+    fetchWasteData();
 
     return () => {
       map.remove();

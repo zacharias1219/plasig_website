@@ -1,7 +1,7 @@
 // src/components/DeviceList.tsx
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button } from '@shadcn/ui';
+import { Button } from './ui/button';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
