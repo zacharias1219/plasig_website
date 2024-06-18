@@ -1,9 +1,9 @@
 // src/pages/_app.tsx
-import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from '@clerk/nextjs';
-import type { AppProps } from 'next/app';
+import { ClerkProvider, SignedIn, SignedOut, RedirectToSignIn } from '@clerk/nextjs';
+import { AppProps } from 'next/app';
 import '../styles/globals.css';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <SignedIn>
@@ -14,6 +14,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </SignedOut>
     </ClerkProvider>
   );
-};
+}
 
 export default MyApp;
