@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
       <SignedOut>
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="flex items-center justify-center min-h-screen text-white text-2xl">
           <p>Please sign in to continue.</p>
         </div>
       </SignedOut>
@@ -21,7 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Header />
         <div className="flex flex-1">
           <Sidebar />
-          <main className="flex-1 p-4">{children}</main>
+          <main className="flex-1 p-8 bg-white rounded-lg shadow-lg m-4">{children}</main>
         </div>
       </SignedIn>
     </div>
