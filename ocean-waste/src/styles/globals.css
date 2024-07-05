@@ -52,4 +52,14 @@
   body {
     @apply bg-[var(--background)] text-[var(--foreground)];
   }
+
+  .bg-white {
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity, 1));
+  }
+
+  .shadow-md {
+    --tw-shadow-color: rgba(0, 0, 0, 0.1);
+    --tw-shadow: var(--tw-shadow-color) 0px 4px 6px -1px, var(--tw-shadow-color) 0px 2px 4px -1px;
+    box-shadow: var(--tw-shadow);
+  }
 }

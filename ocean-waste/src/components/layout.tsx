@@ -21,7 +21,9 @@ const Layout = ({ children }: LayoutProps) => {
         <Header />
         <div className="flex flex-1">
           <Sidebar />
-          <main className="flex-1 p-8 bg-white rounded-lg shadow-lg m-4">{children}</main>
+          <main className="flex-1 p-8 bg-white rounded-lg shadow-lg m-4">
+            {children}
+          </main>
         </div>
       </SignedIn>
     </div>
