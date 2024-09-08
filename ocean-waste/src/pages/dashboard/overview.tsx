@@ -1,6 +1,6 @@
 // src/pages/dashboard/monitoring.tsx
 import Layout from '../../components/layout';
-import { Button } from '@shadcn/ui';
+import { Button } from '@/components/ui/button';
 
 const MonitoringPage = () => {
   return (
