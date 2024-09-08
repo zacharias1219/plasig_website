@@ -1,6 +1,6 @@
 // src/pages/api/monitoring/start.ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import { wss } from '../../../lib/websocketServer';
+import { wss } from '@/lib/websocketServer';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
